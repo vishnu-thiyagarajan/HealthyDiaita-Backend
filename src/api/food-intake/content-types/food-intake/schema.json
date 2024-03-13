@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "food_intakes",
+  "info": {
+    "singularName": "food-intake",
+    "pluralName": "food-intakes",
+    "displayName": "FoodIntake",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "date": {
+      "type": "datetime"
+    },
+    "food": {
+      "type": "text"
+    },
+    "note": {
+      "type": "text"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "food_intakes"
+    }
+  }
+}
